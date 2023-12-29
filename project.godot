@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Flappy Bird"
+run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 
 [rendering]
 
