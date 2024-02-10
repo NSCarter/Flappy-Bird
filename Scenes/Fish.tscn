@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/Fish.gd" id="1_mu76w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5arg"]
-size = Vector2(94, 69)
+size = Vector2(56, 41)
 
 [node name="Fish" type="Node2D"]
 
@@ -17,9 +17,9 @@ offset_left = 6.0
 offset_top = -496.0
 offset_right = 46.0
 offset_bottom = -456.0
-scale = Vector2(2.5, 2.5)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_kix06")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(59, -455.5)
+position = Vector2(38, -471.5)
 shape = SubResource("RectangleShape2D_v5arg")
