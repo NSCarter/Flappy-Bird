@@ -1,12 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://bp1i7kghgxk2o"]
+[gd_scene load_steps=4 format=3 uid="uid://dw5ycwmcu31sx"]
 
-[ext_resource type="Script" path="res://Scripts/Seaweed.gd" id="1_kt478"]
+[ext_resource type="Texture2D" uid="uid://c0mswokvl68h4" path="res://Assets/Images/Seaweed top.png" id="1_jp4ox"]
+[ext_resource type="Texture2D" uid="uid://3wmmbmw4hc71" path="res://Assets/Images/Seaweed.png" id="2_pnclv"]
 
-[node name="Seaweed" type="Node2D"]
-script = ExtResource("1_kt478")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvwt2"]
+size = Vector2(80, 664)
 
-[node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 2.5
-autostart = true
+[node name="Seaweed" type="StaticBody2D"]
 
-[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[node name="Top" type="TextureRect" parent="."]
+offset_right = 16.0
+offset_bottom = 16.0
+scale = Vector2(5, 5)
+texture = ExtResource("1_jp4ox")
+
+[node name="Bottom" type="TextureRect" parent="."]
+offset_top = 80.0
+offset_right = 16.0
+offset_bottom = 196.0
+scale = Vector2(5, 5)
+texture = ExtResource("2_pnclv")
+stretch_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(40, 332)
+shape = SubResource("RectangleShape2D_qvwt2")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
