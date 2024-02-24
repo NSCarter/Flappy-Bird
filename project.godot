@@ -14,6 +14,10 @@ config/name="Flappy Fish"
 run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
+[autoload]
+
+Stats="*res://Scripts/Stats.gd"
+
 [display]
 
 window/stretch/mode="canvas_items"

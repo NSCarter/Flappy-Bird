@@ -21,4 +21,5 @@ func _physics_process(delta):
 
 func reset():
 	get_tree().reload_current_scene()
+	Stats.set_score(0)
 

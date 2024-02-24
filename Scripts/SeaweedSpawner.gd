@@ -15,7 +15,7 @@ func _process(delta):
 
 
 func _on_spawn_timer_timeout():
-	var spawn_pos = randi_range(150, 529)
+	var spawn_pos = randi_range(160, 529)
 	var top = create_seaweed(spawn_pos, true)
 	var bottom = create_seaweed(spawn_pos, false)
 	seaweeds.append([top, bottom])
@@ -26,8 +26,10 @@ func create_seaweed(spawn_pos, is_top):
 	
 	if is_top:
 		seaweed.rotation_degrees = 180
-		spawn_pos -= 230
+		spawn_pos -= 240
 		rotation_pos = 80
+		var ray_cast = seaweed.get_node("RayCast2D") as RayCast2D
+		ray_cast.enabled = true
 		
 	seaweed.position = Vector2(1100 + rotation_pos, spawn_pos)
 	add_child(seaweed)
