@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://l71gw3ott3w0"]
+[gd_scene load_steps=7 format=3 uid="uid://l71gw3ott3w0"]
 
 [ext_resource type="PackedScene" uid="uid://btwuvdhthcvor" path="res://Scenes/Fish.tscn" id="1_mc1iy"]
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_vqupg"]
 [ext_resource type="PackedScene" uid="uid://bp1i7kghgxk2o" path="res://Scenes/SeaweedSpawner.tscn" id="2_ug1ib"]
 [ext_resource type="Script" path="res://Scripts/Score.gd" id="3_8ete8"]
+[ext_resource type="FontFile" uid="uid://wvnxvxkpac2t" path="res://Assets/Font/PixelifySans-VariableFont_wght.ttf" id="4_1286c"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_11pxr"]
 a = Vector2(-150, -41)
 b = Vector2(1010, -41)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_vqupg")
 
 [node name="Floor" type="StaticBody2D" parent="."]
 
@@ -30,9 +33,10 @@ position = Vector2(186, 219)
 
 [node name="Score" type="RichTextLabel" parent="."]
 offset_left = 523.0
-offset_top = 40.0
+offset_top = 46.0
 offset_right = 652.0
-offset_bottom = 146.0
+offset_bottom = 152.0
+theme_override_fonts/normal_font = ExtResource("4_1286c")
 theme_override_font_sizes/normal_font_size = 75
 bbcode_enabled = true
 text = "[center]0[/center]"

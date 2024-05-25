@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxy4yh231ld36"]
+
+[ext_resource type="Script" path="res://Scripts/GameOver.gd" id="1_ctan1"]
+[ext_resource type="FontFile" uid="uid://wvnxvxkpac2t" path="res://Assets/Font/PixelifySans-VariableFont_wght.ttf" id="2_8mrje"]
+[ext_resource type="Texture2D" uid="uid://5jl10ulwoix0" path="res://Assets/Images/Game over background.png" id="2_ke4aj"]
+[ext_resource type="Texture2D" uid="uid://bnpyc0hv6lyx0" path="res://Assets/Images/Restart button.png" id="4_yt7iu"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ctan1")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 248.5
+offset_top = 129.0
+offset_right = 903.5
+offset_bottom = 519.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ke4aj")
+
+[node name="GameOverLabel" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 49.0
+offset_right = 453.0
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8mrje")
+theme_override_font_sizes/font_size = 50
+text = "GAME OVER"
+
+[node name="ScoreLabel" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 158.0
+offset_right = 229.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8mrje")
+theme_override_font_sizes/font_size = 35
+text = "Score:"
+horizontal_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="Background"]
+offset_left = 350.0
+offset_top = 158.0
+offset_right = 534.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8mrje")
+theme_override_font_sizes/font_size = 35
+text = "High Score:
+0"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 154.5
+offset_top = 204.0
+offset_right = 194.5
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8mrje")
+theme_override_font_sizes/font_size = 35
+text = "0"
+horizontal_alignment = 1
+
+[node name="Button" type="TextureButton" parent="Background"]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 296.0
+offset_right = 397.0
+offset_bottom = 341.0
+texture_normal = ExtResource("4_yt7iu")
+
+[node name="RestartLabel" type="Label" parent="Background/Button"]
+layout_mode = 0
+offset_right = 139.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8mrje")
+theme_override_font_sizes/font_size = 28
+text = "Restart"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]
