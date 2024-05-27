@@ -9,9 +9,6 @@ var game_over_scene = preload("res://Scenes/GameOver.tscn")
 var showing_game_over = false
 
 
-func _ready():
-	pass
-
 func _process(delta):
 	if Input.is_action_just_released("jump"):
 		vertical_speed = JUMP_SPEED
@@ -31,6 +28,7 @@ func show_game_over():
 	if not showing_game_over:
 		showing_game_over = true
 		game_over_signal.emit()
+		$AudioStreamPlayer2D.play()
 		var parent = get_parent().get_parent().get_parent()
 		var game_over = game_over_scene.instantiate() as Node2D
 		parent.add_child(game_over)

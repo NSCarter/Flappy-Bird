@@ -41,6 +41,7 @@ text = "Score:"
 horizontal_alignment = 1
 
 [node name="HighScoreLabel" type="Label" parent="Background"]
+layout_mode = 0
 offset_left = 350.0
 offset_top = 158.0
 offset_right = 534.0

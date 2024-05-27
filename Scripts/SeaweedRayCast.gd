@@ -11,3 +11,4 @@ func _process(delta):
 		if passing_through:
 			passing_through = false
 			Stats.set_score(Stats._score + 1)
+			$AudioStreamPlayer2D.play()
