@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://l71gw3ott3w0"]
+[gd_scene load_steps=11 format=3 uid="uid://l71gw3ott3w0"]
 
 [ext_resource type="PackedScene" uid="uid://btwuvdhthcvor" path="res://Scenes/Fish.tscn" id="1_mc1iy"]
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_vqupg"]
+[ext_resource type="Script" path="res://Scripts/SeaBackground.gd" id="2_r0wwi"]
+[ext_resource type="Texture2D" uid="uid://orqw2ane6lto" path="res://Assets/Images/Sea3.png" id="2_u3ebp"]
 [ext_resource type="PackedScene" uid="uid://bp1i7kghgxk2o" path="res://Scenes/SeaweedSpawner.tscn" id="2_ug1ib"]
 [ext_resource type="Script" path="res://Scripts/Score.gd" id="3_8ete8"]
+[ext_resource type="Texture2D" uid="uid://bwxpelrnxlj8i" path="res://Assets/Images/Sea2.png" id="3_mvald"]
 [ext_resource type="FontFile" uid="uid://wvnxvxkpac2t" path="res://Assets/Font/PixelifySans-VariableFont_wght.ttf" id="4_1286c"]
+[ext_resource type="Texture2D" uid="uid://kq2iho0qf78x" path="res://Assets/Images/Sea1.png" id="4_c24hu"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_11pxr"]
 a = Vector2(-150, -41)
@@ -12,6 +16,25 @@ b = Vector2(1010, -41)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_vqupg")
+
+[node name="Background" type="Node2D" parent="."]
+script = ExtResource("2_r0wwi")
+
+[node name="Sea3" type="TextureRect" parent="Background"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_u3ebp")
+
+[node name="Sea2" type="TextureRect" parent="Background"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_mvald")
+
+[node name="Sea1" type="TextureRect" parent="Background"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_c24hu")
+stretch_mode = 1
 
 [node name="Floor" type="StaticBody2D" parent="."]
 

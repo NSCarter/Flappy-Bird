@@ -37,4 +37,3 @@ func create_seaweed(spawn_pos, is_top):
 	seaweed.position = Vector2(1100 + rotation_pos, spawn_pos)
 	add_child(seaweed)
 	return seaweed
-

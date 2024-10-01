@@ -7,7 +7,9 @@ var save_high_score = false
 
 func _ready():
 	var save_file = FileAccess.open("user://savegame.save", FileAccess.READ)
-	high_score = int(save_file.get_as_text())
+	
+	if save_file != null:
+		high_score = int(save_file.get_as_text())
 
 func set_score(score):
 	_score = score
