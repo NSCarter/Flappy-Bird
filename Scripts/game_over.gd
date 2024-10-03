@@ -1,6 +1,5 @@
 extends Node2D
 
-signal reset
 
 func _ready():
 	$Background/Score.text = str(Stats.get_score())

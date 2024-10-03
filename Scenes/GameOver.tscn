@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dxy4yh231ld36"]
 
-[ext_resource type="Script" path="res://Scripts/GameOver.gd" id="1_ctan1"]
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_ctan1"]
 [ext_resource type="FontFile" uid="uid://wvnxvxkpac2t" path="res://Assets/Font/PixelifySans-VariableFont_wght.ttf" id="2_8mrje"]
 [ext_resource type="Texture2D" uid="uid://5jl10ulwoix0" path="res://Assets/Images/Game over background.png" id="2_ke4aj"]
 [ext_resource type="Texture2D" uid="uid://bnpyc0hv6lyx0" path="res://Assets/Images/Restart button.png" id="4_yt7iu"]

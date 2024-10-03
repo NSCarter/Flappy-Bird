@@ -1,30 +1,33 @@
 extends Node2D
 
-var seaweeds = []
-var seaweed_scene = preload("res://Scenes/Seaweed.tscn")
+
+var SeaweedScene = preload("res://Scenes/Seaweed.tscn")
 var game_over = false
 
+var _seaweeds = []
 
-func _process(delta):
+
+func _process(_delta):
 	if not game_over:
-		for seaweed in seaweeds:
+		for seaweed in _seaweeds:
 			seaweed[0].position.x -= 2
 			seaweed[1].position.x -= 2
 			
 			if seaweed[0].position.x < -80:
-				seaweeds.remove_at(seaweeds.find(seaweed))
+				_seaweeds.remove_at(_seaweeds.find(seaweed))
 				remove_child(seaweed[0])
 				remove_child(seaweed[1])
 
 
 func _on_spawn_timer_timeout():
 	var spawn_pos = randi_range(160, 529)
-	var top = create_seaweed(spawn_pos, true)
-	var bottom = create_seaweed(spawn_pos, false)
-	seaweeds.append([top, bottom])
-	
-func create_seaweed(spawn_pos, is_top):
-	var seaweed = seaweed_scene.instantiate() as StaticBody2D
+	var top = _create_seaweed(spawn_pos, true)
+	var bottom = _create_seaweed(spawn_pos, false)
+	_seaweeds.append([top, bottom])
+
+
+func _create_seaweed(spawn_pos, is_top):
+	var seaweed = SeaweedScene.instantiate() as StaticBody2D
 	var rotation_pos = 0
 	
 	if is_top:

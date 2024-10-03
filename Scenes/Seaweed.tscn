@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c0mswokvl68h4" path="res://Assets/Images/Seaweed top.png" id="1_jp4ox"]
 [ext_resource type="Texture2D" uid="uid://3wmmbmw4hc71" path="res://Assets/Images/Seaweed.png" id="2_pnclv"]
-[ext_resource type="Script" path="res://Scripts/SeaweedRayCast.gd" id="3_qqs0l"]
+[ext_resource type="Script" path="res://Scripts/seaweed_ray_cast.gd" id="3_qqs0l"]
 [ext_resource type="AudioStream" uid="uid://dbpa0fbto4sjn" path="res://Assets/Sounds/point.wav" id="4_oy8di"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qvwt2"]

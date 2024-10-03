@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.3", "GL Compatibility")
 
 [autoload]
 
-Stats="*res://Scripts/Stats.gd"
+Stats="*res://Scripts/stats.gd"
 
 [display]
 
